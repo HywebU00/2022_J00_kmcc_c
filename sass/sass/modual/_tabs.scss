@@ -1,0 +1,211 @@
+.tabSet {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    @extend %clearfix;
+    @include screen('mobile') {
+        width: auto;
+        height: auto !important;
+    }
+}
+.tabs {
+    position: relative;
+    // 改button
+    &>.tabItem {
+        &.active {
+            background-color: $primaryColor;
+            color: #fff;
+        }
+        float: left;
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+        line-height: 1;
+        display: block;
+        padding: 16px 0 14px;
+        text-align: center;
+        background-color: #aaa;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        @include text-overflow;
+        box-sizing: border-box;
+        border-radius: 0;
+        &:hover,
+        &:focus {
+            background: $primaryColor;
+            box-shadow: none;
+        }
+        
+        @include screen('mobile') {
+            float: none;
+            width: 100% !important;
+            border-bottom: 1px solid #888;
+            &.active {
+                border-color: #bbb;
+            }
+        }
+    }
+    &.newstab {
+        &>.tabItem {
+            border: 1px solid #91b39b;
+            @include screen('mobile') {
+                margin-bottom: 10px;
+            }
+            &.active {
+                background-color: $secondaryColor;
+                color: #fff;
+            }
+            float: left;
+            margin: 0;
+            padding: 0;
+            font-size: 1em;
+            line-height: 1;
+            display: block;
+            padding: 16px 0 14px;
+            text-align: center;
+            background-color: #fff;
+            color: #333;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            @include text-overflow;
+            box-sizing: border-box;
+            border-radius: 50px;
+            &:hover {
+                background: lighten($secondaryColor, 5);
+                color: #fff;
+                box-shadow: none;
+            }
+            &:focus {
+                background: $secondaryColor;
+                color: #fff;
+               box-shadow: 0 0px 0px 3px $aFocus inset;
+            }
+            @include screen('mobile') {
+                float: none;
+                width: 100% !important;
+                &.active {
+                    border-color: #bbb;
+                }
+            }
+        }
+    }
+}
+//多組 可設定差異
+// 顯示content
+.active+.tabContent {
+    display: block;
+}
+.tabContent {
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    clear: both;
+    padding: 30px 20px;
+    display: none;
+    @include screen('mobile') {
+        position: static;
+        padding: 30px 0px;
+    }
+    ul {
+        @include li-reset;
+    }
+    li {
+        margin: 0 0 1.3em 0;
+        padding: 0;
+        line-height: 1.6;
+        border-bottom: 1px #ccc solid;
+        @include screen('mobile') {
+            @include text-overflow();
+        }
+        a {
+            @include aSetting_nocolor;
+        }
+        time {
+            display: inline-block;
+            margin: 0 0 0 1em;
+            color: #666;
+        }
+    }
+}
+// 公告資訊
+.newstab {
+    .tabContent {
+        .news_firstdata {
+            display: flex;
+            .date {
+                background-color: #d4e1d6;
+                color: #000;
+                flex: none;
+                flex-basis: 100px;
+                max-width: 100px;
+                margin: 0 20px 0 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                box-sizing: border-box;
+                text-align: center;
+                line-height: 1.5em;
+                font-weight: bolder;
+            }
+            .content {
+                flex: auto;
+                flex-basis: calc(100% - 120px);
+                margin-bottom: 10px;
+                overflow: hidden;
+                .title {
+                    font-size: 1.125em;
+                    color: #000;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    a {
+                        color: #000;
+                        text-decoration: underline;
+                        &:hover {
+                            color: $secondaryColor;
+                        }
+                    }
+                }
+                p {
+                    @include text-line(3, 1.6em);
+                    line-height: 1.5em;
+                    color: #313131;
+                    margin: 0;
+                }
+            }
+        }
+        ul {
+            margin-bottom: 20px;
+            li {
+                border-bottom: 1px #cbd6df solid;
+                margin: 0;
+                a {
+                    display: block;
+                    padding: 15px 0 0;
+                    font-weight: bold;
+                    color: #313131;
+                    @include text-overflow;
+                    &:hover {
+                        color: $secondaryColor;
+                    }
+                }
+                time {
+                    border-bottom: 2px solid #d4e1d6;
+                    margin: 0 20px 0 0;
+                    padding: 0px 8px;
+                    color: #000;
+                    width: 100px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+.marquee {
+    height: 45px;
+    display: block;
+    overflow: hidden;
+    background: #FFF;
+    margin: 0;
+    text-align: left;
+    padding: 0 15px 0 25px;
+    position: relative;
+    min-height: 1px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dadada;
+    @media(max-width: 991px) {
+        margin: 1.5em 0em;
+    }
+    @media(max-width:480px) {
+        padding: 0;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none
+    }
+    .slick-prev {
+        transform: rotate(90deg);
+        right: 0px !important;
+        top: -3px !important;
+        left: auto;
+        opacity: 0.5;
+        background: url('../images/slick/icon_arrow_left_inverse.png') no-repeat center center;
+        background-size: 26px;
+        width: 26px !important;
+        height: 26px !important;
+        box-shadow: none;
+        &:hover,
+        &:focus {
+            opacity: 1;
+
+        }
+        &:focus {
+            box-shadow: 0 0px 0px 2px $aFocus;
+        }
+        &:before {
+            width: 10px !important;
+            height: 10px !important
+        }
+    }
+    .slick-next {
+        transform: rotate(-90deg);
+        right: 0px !important;
+        top: 20px !important;
+        left: auto;
+        opacity: 0.5;
+        width: 26px !important;
+        height: 26px !important;
+        background: url('../images/slick/icon_arrow_left_inverse.png') no-repeat center center;
+        background-size: 26px;
+        box-shadow: none;
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
+        &:focus {
+            box-shadow: 0 0px 0px 2px $aFocus;
+        }
+        &:before {
+            width: 10px !important;
+            height: 10px !important
+        }
+    }
+    >div {
+        padding: 0;
+        margin: 0
+    }
+    a {
+        display: block;
+        line-height: 40px;
+        margin-right: 3em;
+        font-weight: bold;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: #000;
+        text-decoration: none;
+        span {
+            color: #7cb52f;
+            margin-right: 15px;
+            display: none;
+        }
+        &:hover {
+            color: $aHover;
+        }
+    }
+}
