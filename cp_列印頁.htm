@@ -214,8 +214,8 @@
                             <picture>
                                 <source media="(min-width: 768px)" srcset="images/information_pic01.jpeg">
                                 <source media="(max-width: 767px)" srcset="images/information_pic01.jpeg">
-                                <img data-src="images/information_pic01.jpeg" class="lazy">
-                                <noscript><img src="images/information_pic01.jpeg"></noscript>
+                                <img data-src="images/information_pic01.jpeg" class="lazy" alt="圖片說明">
+                                <noscript><img src="images/information_pic01.jpeg" alt="圖片說明"></noscript>
                             </picture>
                             <span>縣民遭軍方佔用土地請求補償，金門縣長楊鎮浯昨會同相關單位勘察謀策解決問題。 （民政處提供）</span>
                         </div>
@@ -259,23 +259,15 @@
                         <h3>表格樣式</h3>
                         <table>
                             <tr>
-                                <th>th 1</th>
-                                <th>th 2</th>
-                                <th>th 3</th>
-                                <th>th 4</th>
-                                <th>th 5</th>
-                                <th>th 6</th>
+                                <th scope="col">th 1</th>
+                                <th scope="col">th 2</th>
+                                <th scope="col">th 3</th>
+                                <th scope="col">th 4</th>
+                                <th scope="col">th 5</th>
+                                <th scope="col">th 6</th>
                             </tr>
                             <tr>
-                                <th>th A</th>
-                                <td>td 資料</td>
-                                <td>td 資料</td>
-                                <td>td 資料</td>
-                                <td>td 資料</td>
-                                <td>td 資料</td>
-                            </tr>
-                            <tr>
-                                <th>th B</th>
+                                <th scope="row">th A</th>
                                 <td>td 資料</td>
                                 <td>td 資料</td>
                                 <td>td 資料</td>
@@ -283,7 +275,15 @@
                                 <td>td 資料</td>
                             </tr>
                             <tr>
-                                <th>th C</th>
+                                <th scope="row">th B</th>
+                                <td>td 資料</td>
+                                <td>td 資料</td>
+                                <td>td 資料</td>
+                                <td>td 資料</td>
+                                <td>td 資料</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">th C</th>
                                 <td>td 資料</td>
                                 <td>td 資料</td>
                                 <td>td 資料</td>
