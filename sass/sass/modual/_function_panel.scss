@@ -49,10 +49,8 @@
         }
     }
 }
-
 // function   ------------------------
 $function_color: #666;
-
 //可自訂顏色，或是自帶既有變數，但請注意背景色與字的對比度
 //icon基本設定
 %function_before {
@@ -157,6 +155,9 @@ div.function {
                             filter: invert(100%);
                         }
                     }
+                    &:focus {
+                        box-shadow: 0 0px 0px 3px #fec003;
+                    }
                     &:before {
                         content: '';
                         position: absolute;
@@ -172,7 +173,6 @@ div.function {
                         background-size: 94%;
                     }
                 }
-
                 &.print {
                     a:before {
                         background: url(../images/basic/icon_print-style2.svg) no-repeat center center;
@@ -194,11 +194,63 @@ div.function {
                         background-size: 94%;
                     }
                 }
+                &.facebook, &.googleplus, &.twitter, &.plurk {
+                    a {
+                        background-color:#fff;
+                        &:hover,
+                        &:focus {
+                            background: $aHover;
+                            color: #fff;
+                            &:before {
+                                filter: none;
+                            }
+                        }
+                    }
+                }
+                &.facebook {
+                    a:before {
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background: url(../images/basic/icon_facebook.svg) no-repeat center center;
+                        background-size: 100%;
+                    }
+                }
+                &.googleplus {
+                    a:before {
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background: url(../images/basic/icon_googleplus.svg) no-repeat center center;
+                        background-size: 100%;
+                    }
+                }
+                &.twitter {
+                    a:before {
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background: url(../images/basic/icon_twitter.svg) no-repeat center center;
+                        background-size: 100%;
+                    }
+                }
+                &.plurk {
+                    a:before {
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background: url(../images/basic/icon_plurk.svg) no-repeat center center;
+                        background-size: 100%;
+                    }
+                }
             }
         }
     }
 }
-
 // share 基本樣式   ------------------------
 .share {
     box-sizing: border-box;

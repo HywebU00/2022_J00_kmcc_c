@@ -80,8 +80,8 @@
                 @include screen('tablet') {
                     padding: 0 .9em;
                 }
-                &:focus{
-                     color: $aHover;
+                &:focus {
+                    color: $aHover;
                 }
             }
             &.hasChild {

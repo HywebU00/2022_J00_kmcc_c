@@ -50,7 +50,7 @@ $(function() {
         speed: 300,
         slidesToShow: 5,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         arrow: true,
         infinite: true, //無限輪播
         pauseOnHover: true,
@@ -228,3 +228,15 @@ $(function() {
         ]
     });
 });
+//滑動連結
+$(function() {
+    $('.group01').click(function() {
+        $('body,html').stop(true, true).animate({ scrollTop: $('.areano01').offset().top - 70}, 200, 'easeOutExpo');
+    });
+    $('.group02').click(function() {
+        $('body,html').stop(true, true).animate({ scrollTop: $('.areano02').offset().top - 70}, 200, 'easeOutExpo');
+    });
+    $('.group03').click(function() {
+        $('body,html').stop(true, true).animate({ scrollTop: $('.areano03').offset().top - 70}, 200, 'easeOutExpo');
+    });
+})

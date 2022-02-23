@@ -153,7 +153,7 @@ a.more {
             div {
                 writing-mode: vertical-rl;
                 font-family: 'Noto Serif TC', serif;
-                font-weight: 700;
+                font-weight: 600;
                 font-size: 1.875em;
                 line-height: 2em;
                 letter-spacing: 0.5em;
@@ -465,6 +465,7 @@ a.more {
                     }
                     p {
                         @include text-overflow;
+                        font-weight: bolder;
                     }
                 }
             }
@@ -601,6 +602,7 @@ a.more {
                 }
                 p {
                     @include text-overflow;
+                    font-weight: bolder;
                 }
             }
         }
@@ -690,6 +692,7 @@ a.more {
                         color: #000;
                         font-size: 1.125em;
                         transition: .5s;
+                        font-weight: bolder;
                         &:hover, &:focus {
                             text-shadow: rgb(255, 255, 255) 0px 0px 7px;
                             font-size: 1.313em;

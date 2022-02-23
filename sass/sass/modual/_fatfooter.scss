@@ -4,12 +4,16 @@
     padding-bottom: 2em;
     margin: 0 auto;
     background: $fatfooterBgColor;
+    @include screen('mobile'){
+        display: none;
+    }
     .container {
         overflow: hidden;
         box-sizing: border-box;
         @include gutter;
         @include screen('mobile') {
             @include gutter(60px);
+
         }
     }
     // 按鈕
