@@ -151,6 +151,7 @@ div.function {
                     &:focus {
                         background: $aHover;
                         color: #fff;
+                       box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
                         &:before {
                             filter: invert(100%);
                         }
@@ -196,10 +197,10 @@ div.function {
                 }
                 &.facebook, &.googleplus, &.twitter, &.plurk {
                     a {
-                        background-color:#fff;
+                        background-color: #fff;
                         &:hover,
                         &:focus {
-                            background: $aHover;
+                            background: #fff;
                             color: #fff;
                             &:before {
                                 filter: none;

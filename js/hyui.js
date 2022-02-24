@@ -62,6 +62,7 @@ $(function () {
         _body.removeClass('noscroll');
         _overlay.fadeOut();
         liHasChild.children('ul').hide();
+        $('.m_area .menu ul li.hasChild').find('ul').hide();
     }
     // -------------------------------------------- 打開選單動作
     _sidebarCtrl.off().click(function (e) {
