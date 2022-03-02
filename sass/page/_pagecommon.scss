@@ -339,7 +339,7 @@
         content: '';
         width: 70px;
         height: 40px;
-        background-color: darken($color-red, 5);
+        background-color: rgba(0, 0, 0, .6);
         border-radius: 10px;
         position: absolute;
         left: 50%;
@@ -352,7 +352,7 @@
     }
     &:after {
         content: '';
-        border: 10px solid #fff;
+        border: 10px solid rgba(255, 255, 255, .8);
         border-top-color: transparent;
         border-right-color: transparent;
         border-bottom-color: transparent;
