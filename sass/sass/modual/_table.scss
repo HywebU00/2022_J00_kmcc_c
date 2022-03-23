@@ -270,6 +270,7 @@ table {
             border-bottom: 1px solid #ccc;
             font-weight: bolder;
             text-align: right;
+            vertical-align: top;
         }
         th[scope="row"] {
             border-right: 1px solid #606261;
@@ -281,9 +282,13 @@ table {
             border: none;
             border-bottom: 1px solid #ccc;
             padding: 15px 12px;
+            p {
+                padding: 0;
+                margin: 0 0 1.2em;
+            }
         }
-        ol,ul{
-            li{
+        ol, ul {
+            li {
                 margin-bottom: 10px;
             }
         }
