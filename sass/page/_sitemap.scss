@@ -26,17 +26,20 @@
  $sitemapLength : 4;
  $sitemapWidth:100%/ $sitemapLength;
  .cascading {
-    padding-top: 1em;
+     padding-top: 1em;
      border-top: 1px solid #CCC;
      // @include gutter;
      box-sizing: border-box;
      margin-top: 20px;
      ul {
          @include li-reset;
+         display: flex;
+         align-items: flex-start;
+         flex-wrap: wrap;
      }
      li {
-         line-height: 1.5;
          width: $sitemapWidth;
+         line-height: 1.5;
          display: inline-block;
          vertical-align: top;
          margin: 0 -5px 1em 0; // margin-right:改為負5;
@@ -73,7 +76,7 @@
              }
          }
          ul {
-             padding:0 0 0 2em;
+             padding: 0 0 0 2em;
              li {
                  width: 100%;
                  display: block;
