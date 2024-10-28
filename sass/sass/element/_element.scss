@@ -1,47 +1,50 @@
 // scrollTop
 .scrollToTop {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.4);
-    text-align: center;
-    color: #fff;
-    line-height: 50px;
-    text-decoration: none;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    transition: 0.3s ease-out;
-    display: none;
-    z-index: 99999999;
-    text-indent: -999999px;
-    &:hover,
-    &:focus {
-        background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.8);
-        box-shadow: none;
-    }
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: #fff;
+  line-height: 50px;
+  text-decoration: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  transition: 0.3s ease-out;
+  display: none;
+  z-index: 99999999;
+  text-indent: -999999px;
+  &:hover,
+  &:focus {
+    background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.8);
+    box-shadow: none;
+  }
+  &:focus {
+    box-shadow: 0 0px 0px 3px $aFocus inset;
+  }
 }
 //元素對齊 align
 .align-left {
-    text-align: left;
+  text-align: left;
 }
 .align-center {
-    text-align: center;
+  text-align: center;
 }
 .align-right {
-    text-align: right;
+  text-align: right;
 }
 .align-top {
-    vertical-align: top;
+  vertical-align: top;
 }
 .align-middle {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 .align-bottom {
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
 .align-baseline {
-    vertical-align: baseline;
+  vertical-align: baseline;
 }
 // $fileTypePic: doc, docx, odt, xls, xlsx, csv, ods, ppt, pptx, odp, zip, txt, mov, mp3, jpg, wmv, mp4, pdf, other;
 // @each $fileTypePic in $fileTypePic {
@@ -55,4 +58,3 @@
 //         background-size: contain;
 //     }
 // }
-
