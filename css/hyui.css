@@ -10918,6 +10918,7 @@ h2.title {
   position: relative;
   top: 0;
   left: 0;
+  display: block;
 }
 .cp .pic a:focus:before {
   content: "";
